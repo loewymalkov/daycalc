@@ -8,9 +8,10 @@ import './styles.css';
 $(document).ready(function() {
   $("#date").submit(function(event) {
     event.preventDefault();
-    console.log('loaded submit function');
     let input = $('#date-input').val();
     let inputDate = new Date(input);
-    getDayOf(inputDate);
+    let dayNumberValue = inputDate.getDay();
+    let output = getDayOf(dayNumberValue);
+    $("#dayOutput").text(output);
   });
 });

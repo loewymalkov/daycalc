@@ -1,22 +1,20 @@
-import $ from 'jquery';
-
-
-export function getDayOf(inputDate){
-    let dayOfTheWeek = inputDate.getDay()
+export function getDayOf(dayNumberValue) {
+    let dayOfTheWeek = dayNumberValue;
+    let day = ""
     if (dayOfTheWeek === 1) {
-      $("#dayOutput").text("Monday");
+      day = "Monday";
     } else if (dayOfTheWeek === 2) {
-      $("#dayOutput").text("Tuesday");
+      day = "Tuesday";
     } else if (dayOfTheWeek === 3) {
-      $("#dayOutput").text("Wednesday");
+      day = "Wednesday";
     } else if (dayOfTheWeek === 4) {
-      $("#dayOutput").text("Thursday");
+      day = "Thursday";
     } else if (dayOfTheWeek === 5) {
-      $("#dayOutput").text("Friday");
+      day = "Friday";
     } else if (dayOfTheWeek === 6) {
-      $("#dayOutput").text("Saturday");
+      day = "Saturday";
     } else {
-      $("#dayOutput").text("Sunday");
+      day = "Sunday";
     }
-    return console.log("this worked!");
+    return day;
   }
